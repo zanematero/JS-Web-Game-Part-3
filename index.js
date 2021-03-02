@@ -1,14 +1,12 @@
 function newImage(url, left, bottom){
-    let object = document.createElement('img')
-    object.src = url
-    object.style.position = 'fixed'
-    object.style.left = left + 'px'
-    object.style.bottom = bottom + 'px'
-    document.body.append(object)
-    return object
+    let image = document.createElement('img')
+    image.src = url
+    image.style.position = 'fixed'
+    image.style.left = left + 'px'
+    image.style.bottom = bottom + 'px'
+    document.body.append(image)
+    return image
 }
-
-let inventory = document.createElement('div')
 
 function newItem(url, left, bottom){
     let item = newImage(url, left, bottom)
@@ -21,6 +19,7 @@ function newItem(url, left, bottom){
 }
 
 function makeInventory(){
+    let inventory = document.createElement('div')
     inventory.style.position = 'fixed'
     inventory.style.bottom = '0px';
     inventory.style.left = '0px'
@@ -33,10 +32,11 @@ function makeInventory(){
     inventory.style.border = '2px solid black'
     inventory.style.backgroundColor = 'brown'
     document.body.append(inventory)
+    return inventory
 }
 
 
-makeInventory()
+const inventory = makeInventory()
 newImage('assets/green-character.gif', 100, 250)
 newImage('assets/tree.png', 200, 450)
 newImage('assets/pillar.png', 350, 250)
