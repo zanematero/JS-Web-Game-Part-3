@@ -16,6 +16,7 @@ function newItem(url, left, bottom){
         inventoryItem.src = url;
         inventory.append(inventoryItem)
     })
+    return item
 }
 
 function makeInventory(){
