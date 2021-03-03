@@ -19,7 +19,7 @@ function newItem(url, left, bottom){
     return item
 }
 
-function makeInventory(){
+function newInventory(){
     let inventory = document.createElement('div')
     inventory.style.position = 'fixed'
     inventory.style.bottom = '0px';
@@ -37,7 +37,7 @@ function makeInventory(){
 }
 
 
-const inventory = makeInventory()
+const inventory = newInventory()
 newImage('assets/green-character.gif', 100, 250)
 newImage('assets/tree.png', 200, 450)
 newImage('assets/pillar.png', 350, 250)
